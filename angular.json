@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngmotivate"
+    }
+  },
+  "defaultProject": "ngmotivate",
+  "cli": {
+    "analytics": false
+  }
 }
