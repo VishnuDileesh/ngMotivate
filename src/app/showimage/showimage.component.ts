@@ -9,9 +9,11 @@ export class ShowimageComponent implements OnInit {
   bgImageUrl: string;
   bgStyle: any;
 
+  width = window.innerWidth;
+  height = window.innerHeight;
+
   constructor() {
-    this.bgImageUrl =
-      'https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80';
+    this.bgImageUrl = `https://picsum.photos/${this.width}/${this.height}.jpg`;
 
     this.bgStyle = {
       backgroundImage: `url(${this.bgImageUrl})`,
