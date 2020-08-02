@@ -6,9 +6,10 @@ import { ImageapiService } from 'src/app/imageapi.service';
 
 import { AppComponent } from './app.component';
 import { ShowimageComponent } from './showimage/showimage.component';
+import { MotivateComponent } from './motivate/motivate.component';
 
 @NgModule({
-  declarations: [AppComponent, ShowimageComponent],
+  declarations: [AppComponent, ShowimageComponent, MotivateComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [ImageapiService],
   bootstrap: [AppComponent],
