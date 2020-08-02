@@ -35,4 +35,8 @@ export class MotivateComponent implements OnInit {
       backgroundImage: `url(${this.bgImageUrl})`,
     };
   }
+
+  giveMotivation(event: any): void {
+    this.getBgImage();
+  }
 }
