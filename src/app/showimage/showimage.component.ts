@@ -8,6 +8,7 @@ import { ImageapiService } from 'src/app/imageapi.service';
 })
 export class ShowimageComponent implements OnInit {
   @Input() bgStyle;
+  @Input() quote;
 
   constructor(private imageapi: ImageapiService) {}
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-showquote',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showquote.component.css'],
 })
 export class ShowquoteComponent implements OnInit {
+  @Input() quote;
+
   constructor() {}
 
   ngOnInit(): void {}

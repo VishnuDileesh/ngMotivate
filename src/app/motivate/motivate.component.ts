@@ -60,5 +60,6 @@ export class MotivateComponent implements OnInit {
 
   giveMotivation(event: any): void {
     this.getBgImage();
+    this.getQuote();
   }
 }
