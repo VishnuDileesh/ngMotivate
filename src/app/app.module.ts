@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ImageapiService } from 'src/app/imageapi.service';
+import { QuoteapiService } from 'src/app/quoteapi.service';
 
 import { AppComponent } from './app.component';
 import { ShowimageComponent } from './showimage/showimage.component';
@@ -11,9 +12,15 @@ import { MotivatebuttonComponent } from './motivatebutton/motivatebutton.compone
 import { ShowquoteComponent } from './showquote/showquote.component';
 
 @NgModule({
-  declarations: [AppComponent, ShowimageComponent, MotivateComponent, MotivatebuttonComponent, ShowquoteComponent],
+  declarations: [
+    AppComponent,
+    ShowimageComponent,
+    MotivateComponent,
+    MotivatebuttonComponent,
+    ShowquoteComponent,
+  ],
   imports: [BrowserModule, HttpClientModule],
-  providers: [ImageapiService],
+  providers: [ImageapiService, QuoteapiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

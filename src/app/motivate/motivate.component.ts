@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageapiService } from 'src/app/imageapi.service';
+import { QuoteapiService } from 'src/app/quoteapi.service';
 
 @Component({
   selector: 'app-motivate',
@@ -12,10 +13,18 @@ export class MotivateComponent implements OnInit {
   photo: any;
   bgImageUrl: string;
 
-  constructor(private imageapi: ImageapiService) {}
+  quotes = [];
+  quotecount: any;
+  quote: any;
+
+  constructor(
+    private imageapi: ImageapiService,
+    private quoteapi: QuoteapiService
+  ) {}
 
   ngOnInit(): void {
     this.getBgImage();
+    this.getQuote();
   }
 
   getBgImage(): void {
@@ -32,6 +41,21 @@ export class MotivateComponent implements OnInit {
     this.bgStyle = {
       backgroundImage: `url(${this.bgImageUrl})`,
     };
+  }
+
+  getQuote() {
+    this.quoteapi.fetchQuote().subscribe((data) => {
+      this.quotes = data;
+      this.quotecount = this.quotes[
+        Math.floor(Math.random() * this.quotes.length)
+      ];
+      console.log(this.quotecount);
+
+      this.quote = {
+        text: this.quotecount.text,
+        author: this.quotecount.author,
+      };
+    });
   }
 
   giveMotivation(event: any): void {
