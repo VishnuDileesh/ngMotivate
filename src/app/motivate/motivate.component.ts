@@ -43,7 +43,7 @@ export class MotivateComponent implements OnInit {
     };
   }
 
-  getQuote() {
+  getQuote(): void {
     this.quoteapi.fetchQuote().subscribe((data) => {
       this.quotes = data;
       this.quotecount = this.quotes[
