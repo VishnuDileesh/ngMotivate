@@ -26,8 +26,6 @@ export class MotivateComponent implements OnInit {
 
       this.setBgImage();
     });
-
-    console.log('am motivate');
   }
 
   setBgImage(): void {
