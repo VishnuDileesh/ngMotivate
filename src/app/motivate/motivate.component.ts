@@ -40,6 +40,7 @@ export class MotivateComponent implements OnInit {
   setBgImage(): void {
     this.bgStyle = {
       backgroundImage: `url(${this.bgImageUrl})`,
+      backgroundSize: 'cover',
     };
   }
 

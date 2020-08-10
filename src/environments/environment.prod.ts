@@ -1,4 +1,4 @@
 export const environment = {
-  imageAPIKey: 'your pexels api goes here',
+  imageAPIKey: 'Pexels API goes here',
   production: true,
 };
